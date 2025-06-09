@@ -2,17 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #1d503a;
   color: #faf5ee;
 }
 main{
-  background: #191419;
+  background: #191919;
 }
 .nav-bar{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 30px;
+  background: #191919;
 }
 .logo i{
   font-size: 2rem;
@@ -25,15 +25,38 @@ ul{
   gap: 3rem;
 }
 .nav-link a{
+  position: relative;
   text-decoration: none;
   font-size: 1.5rem;
+  font-family: poppins, sans-serif;
+}
+.nav-link a::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #faf5ee;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+.nav-link a:hover::before{
+  width: 100%;
+}
+.nav-link a:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+
 }
 #home{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 98%;
+  margin: auto;
   height: 100vh;
+  border-radius: 12px;
+  background: #1d503a;
 }
 .sidebar{
   width: 50%;
@@ -42,7 +65,14 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+}
+.sidebar h2{
+  font-family: Boldonse, sans-serif;
+  font-size: 1.5rem;
+}
+.sidebar p{
+  font-family: Oswald, sans-serif;
+  font-size: 1.2rem;
 }
 .my-photo{
   width: 30%;
@@ -57,6 +87,210 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+}
+.main-article h1{
+  font-family: Boldonse, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.main-article p{
+  font-family: Oswald, sans-serif;
+  font-size: 1.2rem;
+}
+#about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  margin: auto;
+  margin-top: 1rem;
+  height: 30vh;
+  border-radius: 12px;
+  background: #1d503a;
+}
+#about h2{
+  font-family: Boldonse, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#about p{
+  font-family: Oswald, sans-serif;
+  font-size: 1.2rem;
+}
+#skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  margin: auto;
+  margin-top: 1rem;
+  height: 70vh;
+  border-radius: 12px;
+  background: #1d503a;
+}
+#skills h2{
+  font-family: Boldonse, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#skills p{
+  font-family: Oswald, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.skills-list{
+  max-width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Oswald, sans-serif;
+  padding: 1rem;
+  color: #000;
+}
+/* Skills-list ( zagłębić się i zrozumieć) !!! */
+.bar {
+  position: relative;
+  background: #e0e0e0;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  overflow: hidden;
 }
 
+.bar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: #4caf50;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.bar-90::before { width: 90%; }
+.bar-85::before { width: 85%; }
+.bar-80::before { width: 80%; }
+.bar-75::before { width: 75%; }
+
+.bar {
+  z-index: 1;
+}
+#contact{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 98%;
+  margin: auto;
+  margin-top: 1rem;
+  height: 70vh;
+  border-radius: 12px;
+  background: #1d503a;
+}
+#contact h2{
+  font-family: Boldonse, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+} 
+.form-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#contact label{
+  font-family: Oswald, sans-serif;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+} 
+
+input, textarea{
+  color:#000;
+  font-family: Oswald, sans-serif;
+}
+
+.contact-form{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+button{
+  width: 20%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background: #96c898;
+  color: #1d503a;
+  font-family: Oswald, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover{
+  color: #000;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 98%;
+  margin: auto;
+  margin-top: 1rem;
+  height: 30vh;
+  border-radius: 12px;
+  background: #1d503a;
+}
+.footer p{
+  font-family: Boldonse, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.social-icons{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+.social-icons i:hover{
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+.fa-github:hover{
+  color:#6e5494
+}
+.fa-instagram:hover{
+  background: linear-gradient(
+  45deg,
+  #feda75,
+  #fa7e1e,
+  #d62976,
+  #962fbf,
+  #4f5bd5
+);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+}
+.fa-facebook:hover{
+  color:#1877F2;
+}
+.fa-twitter:hover{
+  color:#1DA1F2;
+}

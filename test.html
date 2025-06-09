@@ -7,11 +7,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
         </style>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-        </style>
-    <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+        </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Portfolio</title> 
     <link rel="stylesheet" href="styles.css">
@@ -49,29 +49,31 @@
         <section id="skills">
             <h2>Skills</h2>
             <p>A list of my skills and technologies I work with.</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Git</li>
-                <li>GitHub</li>
+            <ul class="skills-list">
+                <li class="bar bar-90">HTML</li>
+                <li class="bar bar-85">CSS</li>
+                <li class="bar bar-75">Git</li>
+                <li class="bar bar-80">GitHub</li>
+            </ul>    
         </section>
-        <section class="contact-section">
+        <section id="contact">
             <h2>Skontaktuj się ze mną</h2>
-            <form class="contact-form">
+            <div class="form-row">  
               <label for="name">Imię:</label>
               <input type="text" id="name" name="name" required>
-          
+            </div>  
+            <div class="form-row">
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
-          
+            </div>
+            <div class="form-row">
               <label for="message">Wiadomość:</label>
               <textarea id="message" name="message" rows="5" required></textarea>
-          
+            </div>
               <button type="submit">Wyślij</button>
             </form>
-          </section>  
-    </main>
-        <footer>
+          </section> 
+          <footer>
             <div class="footer">
                 <p>Follow me on social media</p>
                 <div class="social-icons"> 
@@ -80,6 +82,8 @@
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-twitter"></i>
                 </div>
-        </footer>
+            </div>   
+        </footer> 
+    </main>
 </body>
 </html>
